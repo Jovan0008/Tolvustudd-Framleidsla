@@ -165,19 +165,59 @@
 						</div>
 					</section> -->
 
-      <!-- CTA -->
-      <!-- <section id="cta" class="wrapper style4">
-						<div class="inner">
-							<header>
-								<h2>Arcue ut vel commodo</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum endrerit imperdiet amet eleifend fringilla.</p>
-							</header>
-							<ul class="actions stacked">
-								<li><a href="#" class="button fit primary">Activate</a></li>
-								<li><a href="#" class="button fit">Learn More</a></li>
-							</ul>
-						</div>
-					</section> -->
+      <!--  CTA -->
+      <section id="cta" class="wrapper style4">
+        <div class="inner">
+          <section id="pid-demo">
+            <h2>PID stýring - demo</h2>
+            <p>
+              Einföld hermun af fyrsta stigs lokaðri lykkju með PID stýringu.
+              Stilltu Kp, Ki og Kd gildi með rennihnöppum og sjáðu hvernig
+              hegðun kerfisins breytist.
+            </p>
+
+            <div class="pid-controls">
+              <label
+                >Kp: <span id="kpVal">1.0</span>
+                <input
+                  type="range"
+                  id="kp"
+                  min="0"
+                  max="10"
+                  step="0.1"
+                  value="1"
+                />
+              </label>
+
+              <label
+                >Ki: <span id="kiVal">0.0</span>
+                <input
+                  type="range"
+                  id="ki"
+                  min="0"
+                  max="5"
+                  step="0.05"
+                  value="0"
+                />
+              </label>
+
+              <label
+                >Kd: <span id="kdVal">0.0</span>
+                <input
+                  type="range"
+                  id="kd"
+                  min="0"
+                  max="5"
+                  step="0.05"
+                  value="0"
+                />
+              </label>
+            </div>
+
+            <canvas id="pidChart"></canvas>
+          </section>
+        </div>
+      </section>
 
       <!-- Footer -->
       <footer id="footer">
@@ -215,5 +255,106 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const kpSlider = document.getElementById("kp");
+      const kiSlider = document.getElementById("ki");
+      const kdSlider = document.getElementById("kd");
+
+      const kpVal = document.getElementById("kpVal");
+      const kiVal = document.getElementById("kiVal");
+      const kdVal = document.getElementById("kdVal");
+
+      const ctx = document.getElementById("pidChart").getContext("2d");
+
+      const dt = 0.05;
+      const steps = 200;
+      const setpoint = 1.0;
+
+      // First-order plant: dx/dt = (-x + u) / tau
+      const tau = 1.0;
+
+      function simulatePID(Kp, Ki, Kd) {
+        let x = 0;
+        let integral = 0;
+        let prevError = 0;
+
+        let y = [];
+        let t = [];
+
+        for (let i = 0; i < steps; i++) {
+          const time = i * dt;
+          const error = setpoint - x;
+
+          integral += error * dt;
+          const derivative = (error - prevError) / dt;
+
+          const u = Kp * error + Ki * integral + Kd * derivative;
+
+          x += dt * ((-x + u) / tau);
+
+          prevError = error;
+
+          y.push(x);
+          t.push(time.toFixed(2));
+        }
+
+        return { t, y };
+      }
+
+      let data = simulatePID(1, 0, 0);
+
+      const chart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: data.t,
+          datasets: [
+            {
+              label: "System Output",
+              data: data.y,
+              borderWidth: 2,
+              tension: 0.25,
+            },
+            {
+              label: "Setpoint",
+              data: Array(steps).fill(setpoint),
+              borderDash: [6, 6],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          scales: {
+            x: {
+              title: { display: true, text: "Time [s]" },
+            },
+            y: {
+              title: { display: true, text: "Output" },
+              min: 0,
+            },
+          },
+        },
+      });
+
+      function update() {
+        const Kp = parseFloat(kpSlider.value);
+        const Ki = parseFloat(kiSlider.value);
+        const Kd = parseFloat(kdSlider.value);
+
+        kpVal.textContent = Kp.toFixed(2);
+        kiVal.textContent = Ki.toFixed(2);
+        kdVal.textContent = Kd.toFixed(2);
+
+        const sim = simulatePID(Kp, Ki, Kd);
+        chart.data.datasets[0].data = sim.y;
+        chart.update();
+      }
+
+      [kpSlider, kiSlider, kdSlider].forEach((s) =>
+        s.addEventListener("input", update),
+      );
+    </script>
   </body>
 </html>

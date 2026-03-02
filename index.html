@@ -45,11 +45,33 @@
       </header>
 
       <!-- Banner -->
-      <section id="banner">
+      <!--       <section id="banner">
         <div class="inner">
           <h2>Jovan Gajic</h2>
           <p>Vinnubók í Tölvustuddri Framleiðslu VÉL608G</p>
         </div>
+        <a href="#one" class="more scrolly">Nánar</a>
+      </section> -->
+
+      <section id="banner">
+        <div class="overlay"></div>
+
+        <div class="split-container">
+          <div class="split-left">
+            <h1>Jovan Gajic</h1>
+            <p>Vinnubók í Tölvustuddri Framleiðslu VÉL608G.</p>
+          </div>
+
+          <div class="hero-card">
+            <h4>Nýjasta verkefni</h4>
+            <h2>Vefsíðan mín</h2>
+            <p>
+              Vefsíðugerð og útgáfustýring – vefsíða sem hýsir vinnubók mína.
+            </p>
+            <a href="verkefni1.html" class="button primary"> Sjá verkefni </a>
+          </div>
+        </div>
+
         <a href="#one" class="more scrolly">Nánar</a>
       </section>
 
@@ -60,7 +82,7 @@
             <h2>Almennt um mig</h2>
             <p>
               Ég er nemandi á 3.ári í Vélaverkfræði við HÍ. Innan verkfræðinnar
-              heillar mig mekatróník og stýrikerfi mest.<br />
+              heillar mig mekatróník, stýrikerfi og orka mest.<br />
               Ég er jákvæður, metnaðarfullur og hef gaman að því að læra nýja
               hluti. Ég tek ábyrgð á verkefnum sem mér er falið og reyni alltaf
               að nálgast áskoranir með opnum huga og lausnamiðaðri hugsun.
@@ -223,10 +245,44 @@
 
       <!-- Footer -->
       <footer id="footer">
+        <section id="contact" class="contact-section">
+          <div class="contact-container">
+            <h2>Hafðu samband</h2>
+            <p class="contact-sub">
+              Hafðu endilega samband ef þú ert með einhverjar fyrirspurnir
+            </p>
+
+            <form action="https://formspree.io/f/xvzbjrgj" method="POST">
+              <div class="row">
+                <div class="field">
+                  <label for="name">Nafn</label>
+                  <input type="text" name="name" id="name" required />
+                </div>
+
+                <div class="field">
+                  <label for="email">Netfangið þitt</label>
+                  <input type="email" name="email" id="email" required />
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="message">Skilaboð</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="6"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="contact-actions">
+                <button type="submit" class="contact-button">SENDA</button>
+              </div>
+            </form>
+          </div>
+        </section>
+        <br />
         <ul class="icons">
-          <header>
-            <h2>Hafðu samband:</h2>
-          </header>
           <li>
             <a
               href="https://www.instagram.com/jovangaajic/"

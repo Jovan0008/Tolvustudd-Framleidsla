@@ -4024,3 +4024,334 @@ input, select, textarea {
 .pid-controls input[type="range"] {
   width: 100%;
 } */
+
+/* nýr banner */
+
+/* Remove default centering */
+#banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#banner .inner {
+  display: none;
+}
+
+/* New split layout */
+.split-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+.split-left {
+  flex: 1;
+}
+
+.split-left h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+.split-left h3 {
+  font-weight: 400;
+  margin-bottom: 1em;
+  color: #00bfa6; /* your accent color */
+}
+
+.split-left p {
+  max-width: 500px;
+  margin-bottom: 2em;
+}
+
+.split-right {
+  flex: 1;
+  text-align: right;
+}
+
+.split-right img {
+  max-width: 90%;
+  border-radius: 10px;
+}
+
+#banner {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url("images/banner.jpg") center/cover no-repeat;
+}
+
+#banner .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.split-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  color: white;
+}
+
+.split-left {
+  flex: 1;
+}
+
+.split-left h1 {
+  font-size: 3.2rem;
+  margin-bottom: 0.5em;
+}
+
+.split-left h3 {
+  color: #00bfa6;
+  margin-bottom: 1em;
+}
+
+.split-left p {
+  max-width: 500px;
+  margin-bottom: 2em;
+}
+
+.hero-buttons a {
+  margin-right: 15px;
+}
+
+.split-right {
+  flex: 1;
+  text-align: right;
+}
+
+.split-right img {
+  max-width: 80%;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+
+/* ===== Hero Featured Card ===== */
+
+.hero-card {
+  background: #505393;
+  backdrop-filter: blur(12px);
+  padding: 3em;
+  border-radius: 18px;
+
+  border-left: 5px solid #00bfa6;
+  border: 1px solid rgba(255,255,255,0.15);
+
+  max-width: 420px;
+  box-shadow: 0 30px 60px #505393;
+
+  text-align: left;
+
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+}
+
+.hero-card:hover {
+  transform: translateY(10px);
+  box-shadow: 0 40px 80px #505393;
+}
+
+.hero-card h4 {
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-bottom: 1em;
+}
+
+.hero-card h2 {
+  margin-bottom: 0.5em;
+}
+
+.hero-card p {
+  margin-bottom: 1.5em;
+  line-height: 1.5;
+}
+
+.hero-card .button {
+  border-radius: 8px;
+  padding: 0.7em 1.5em;
+}
+
+/* ===== Force Left Alignment Inside Hero Card ===== */
+
+.hero-card {
+  text-align: left !important;
+}
+
+.hero-card * {
+  text-align: left !important;
+}
+
+.hero-card .button {
+  display: inline-block;
+}
+
+/* ===== Fix button alignment inside hero card ===== */
+
+.hero-card {
+  text-align: left !important;
+}
+
+/* Make sure nothing inside is centered by template rules */
+.hero-card * {
+  text-align: left !important;
+}
+
+/* Force the CTA to sit left */
+.hero-card .button,
+.hero-card a.button {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+
+  width: auto !important;
+  margin: 0 !important;        /* kills auto-centering */
+}
+
+/* If your template wraps buttons in <ul class="actions">, kill that too */
+.hero-card .actions {
+  justify-content: flex-start !important;
+}
+
+.hero-card .actions li {
+  padding-left: 0 !important;
+}
+
+/* ===== Fix Banner Left Alignment ===== */
+
+#banner .split-left {
+  text-align: left !important;
+  max-width: 600px;
+}
+
+#banner .split-left * {
+  text-align: left !important;
+}
+
+/* ===== Contact Section ===== */
+
+.contact-section {
+  background: linear-gradient(135deg, #505393, #505393);
+  padding: 6em 0;
+  color: white;
+}
+
+.contact-container {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+}
+
+.contact-section h2 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+.contact-sub {
+  opacity: 0.8;
+  margin-bottom: 3em;
+}
+
+.row {
+  display: flex;
+  gap: 2em;
+  margin-bottom: 2em;
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+.field input,
+.field textarea {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 1em;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: white;
+}
+
+.contact-button {
+  background: #ff4c38;
+  border: none;
+  padding: 1em 2em;
+  border-radius: 40px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-button:hover {
+  background: #ff2e1a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* ===== Fix Contact Button Alignment ===== */
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section .contact-button {
+  align-self: center; /* centers cleanly inside flex container */
+  margin-top: 2em;
+}
+
+/* ===== Perfect button centering for contact form ===== */
+
+.contact-actions {
+  display: flex;
+  justify-content: center;  /* true horizontal centering */
+  width: 100%;
+  margin-top: 2em;
+}
+
+.contact-button {
+  margin: 0 !important;     /* kill Spectral default margins */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optional: make spacing under textarea consistent */
+.contact-section textarea {
+  margin-bottom: 0 !important;
+}

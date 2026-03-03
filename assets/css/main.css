@@ -4188,16 +4188,6 @@ input, select, textarea {
   padding: 0.7em 1.5em;
 }
 
-/* ===== Force Left Alignment Inside Hero Card ===== */
-
-.hero-card {
-  text-align: left !important;
-}
-
-.hero-card * {
-  text-align: left !important;
-}
-
 .hero-card .button {
   display: inline-block;
 }

@@ -4192,18 +4192,14 @@ input, select, textarea {
   display: inline-block;
 }
 
-/* ===== Fix button alignment inside hero card ===== */
-
 .hero-card {
   text-align: left !important;
 }
 
-/* Make sure nothing inside is centered by template rules */
 .hero-card * {
   text-align: left !important;
 }
 
-/* Force the CTA to sit left */
 .hero-card .button,
 .hero-card a.button {
   display: inline-flex !important;
@@ -4211,10 +4207,9 @@ input, select, textarea {
   justify-content: center;
 
   width: auto !important;
-  margin: 0 !important;        /* kills auto-centering */
+  margin: 0 !important;       
 }
 
-/* If your template wraps buttons in <ul class="actions">, kill that too */
 .hero-card .actions {
   justify-content: flex-start !important;
 }
@@ -4222,8 +4217,6 @@ input, select, textarea {
 .hero-card .actions li {
   padding-left: 0 !important;
 }
-
-/* ===== Fix Banner Left Alignment ===== */
 
 #banner .split-left {
   text-align: left !important;

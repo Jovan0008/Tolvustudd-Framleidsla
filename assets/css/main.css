@@ -3816,7 +3816,7 @@ input, select, textarea {
 	#main > header {
 		padding: 12em 0 10em 0 ;
 		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/forsiða.jpeg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/koði.png");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/forsiða.jpeg");
 		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/forsiða.jpeg");
 		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/forsiða.jpeg");
 		background-attachment: fixed;
@@ -3832,7 +3832,7 @@ input, select, textarea {
 		}
 
 			#main > header h2 #v1 {
-				background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/koði.png");
+				background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/final.jpeg");
 			}
 
 		#main > header p {
@@ -4337,4 +4337,18 @@ input, select, textarea {
 /* Optional: make spacing under textarea consistent */
 .contact-section textarea {
   margin-bottom: 0 !important;
+}
+
+.side-by-side {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.side-by-side img {
+  width: calc(50% - 10px);
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  display: block;
 }

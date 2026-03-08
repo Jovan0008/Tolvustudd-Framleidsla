@@ -6,7 +6,7 @@
 -->
 <html>
   <head>
-    <title>Verkefni 1</title>
+    <title>Verkefni 2</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -50,6 +50,19 @@
           <h2>Verkefni 2</h2>
           <p>Parametrísk hönnun og tölvustuddur skurður</p>
         </header>
+        <section class="wrapper style5">
+          <div class="inner">
+            <header class="major">
+              <h2>Lokaafurð</h2>
+              <p>Hér má sjá lokaútkomuna úr verkefninu.</p>
+            </header>
+
+            <div class="side-by-side">
+              <img src="images/AppleFinish.jpg" alt="" />
+              <img src="images/final.jpeg" alt="" />
+            </div>
+          </div>
+        </section>
         <section class="wrapper style5">
           <div class="inner">
             <h3>Vínylskurður</h3>
@@ -141,12 +154,13 @@
                 />
               </figure>
             </p>
+            <hr />
             <h3>Parametrískt, geirneglt (pressfit) módel</h3>
             <h4>Undirbúningur og hugmyndaleit</h4>
             <p>
               Eftir að hafa horft á kynningarmyndbandið eins og nefnt var áður
               leit ég aðeins í kringum mig. Mig langaði að hanna eitthvað
-              gagnglegt og einfalt. Eftir smá umhugsun blasti við mér eitthvað
+              gagnlegt og einfalt. Eftir smá umhugsun blasti við mér eitthvað
               sem ég gæti lagað. Ég tók eftir að ég ætti marga rakspíra og
               vantaði góða hillu til að geyma þá í.
 
@@ -188,7 +202,7 @@
               vann ég með Benedikt Kristin Briem og Bjarna Hauksson. Við fengum
               þær fréttir að það verður ekki í boði að nota krossvið svo ákveðið
               var að gera kerf prófun á 5 mm akrýl (og ég notaði það efni í
-              framhaldi verkefnisins). Við ákváðum að hafa Kerfið einfalt, 20
+              framhaldi verkefnisins). Við ákváðum að hafa kerfið einfalt, 20
               30mmx6mm bitar í stærri ramma. Fusion var notað til að teikna og
               skjalið sent svo yfir í tölvuna sem er tengd við leisiskerann sem
               DXF file. Skjalið var aðeins fiffað til og sent í skurðartækið.
@@ -232,19 +246,238 @@
               </figure>
 
               Fjarlægðin sem við fengum var 3,78 mm og við deildum henni á alla
-              skurðana sem voru 21 talsins. Kerfið var þá 0,18 mm og það notað í
+              skurðina sem voru 21 talsins. Kerfið var þá 0,18 mm og það notað í
               framhaldi verkefnisins.
             </p>
+
+            <h4>Hönnun</h4>
+            <p>
+              Þar sem ég hafði nánast enga reynslu á Fusion 360 ákvað ég að
+              horfa á nokkur vídeó til að byrja með. Ég horfði fyrst á
+              myndbandið
+              <a href="https://www.youtube.com/watch?v=USVU4J5Al-s&t=0s"
+                >Parametrar 1</a
+              >
+              til þess að átta mig á parametragerð. Síðan horfði ég á
+              <a href="https://www.youtube.com/watch?v=9U2JPfkQpsE"
+                >Finger-joints: Fusion 360</a
+              >
+              sem var mjög gagnlegt og ég lærði í rauninni allt sem ég þurfti
+              til þess að teikna í því myndbandi. Líkt og í myndbandinu byrjaði
+              ég á að teikna eina plötu, en ég valdi bakplötuna. Ég fór síðan
+              koll af kolli, teiknaði hverja plötu út frá þeirri á undan og
+              hafði fingurna á brúnunum eins og í myndbandinu. Hér fyrir neðan
+              má sjá hvernig þetta kom út.
+
+              <figure style="text-align: center">
+                <img
+                  src="images/hilla_fusion.png"
+                  style="max-width: 70%; height: auto"
+                />
+                <figcaption>Hönnun á hillunni í Fusion 360.</figcaption>
+              </figure>
+              <br />
+
+              Ég teiknaði svo skúffuna sér í lagi. Til að byrja með gerði ég
+              hana beint ofan á hilluna sjálfa, en þar mynduðust allskonar
+              vandamál þegar parametrum var breytt, þar sem skúffuteikningarnar
+              voru festar í Projected lines frá hillunni sem hliðruðust. Ég
+              ákvað því að teikna skúffuna sér í lagi, við hliðina á hillunni.
+              Hér má sjá skúffuna og parametrana mína.
+
+              <figure style="text-align: center">
+                <img
+                  src="images/skuffa_fusion.png"
+                  style="max-width: 70%; height: auto"
+                />
+                <figcaption>Hönnun á skúffunni í Fusion 360.</figcaption>
+              </figure>
+              <br />
+
+              <figure style="text-align: center">
+                <img
+                  src="images/parametrar1.png"
+                  style="max-width: 70%; height: auto"
+                />
+                <figcaption>Parametrar 1/2</figcaption>
+              </figure>
+              <br />
+
+              <figure style="text-align: center">
+                <img
+                  src="images/parametrar2.png"
+                  style="max-width: 70%; height: auto"
+                />
+                <figcaption>Parametrar 2/2</figcaption>
+              </figure>
+              <br />
+
+              Parametrana hannaði ég að mestu leyti eins og í myndbandinu, ég
+              hafði sér hæð, breidd og lengd ásamt fingrafjölda og reiknaði
+              fingrabreiddina út frá því. Hér lenti ég í smá veseni því ég hafði
+              ekki skilgreint allar fjarlægðir með parametrum og þegar ég
+              breytti einhverjum þá breyttist allt og ég þurfti að laga það. Ég
+              lærði þó mikið í þessum hluta og fannst gaman að leika mér með
+              parametrana og sjá hvernig þeir höfðu áhrif á hönnunina.
+            </p>
+            <h4>Undirbúningur fyrir skurð</h4>
+            <p>
+              Þegar hönnunin var komin þurfti ég að undirbúa hilluna fyrir
+              skurð. Ég bjó til aðra möppu í Bodies og afritaði bæði skúffuna og
+              hilluna. Síðan notaði ég Align og Move til að fletja út allar
+              plötur og raða þeim upp á 500x500mm reit sem ég teiknaði. Mér
+              fannst þetta þó frekar tæpt þannig ég minnkaði stærðina á
+              hillunni, breiddina í 250 mm, hæðina í 120 mm, lengdina í 180 mm
+              og dýpt skúffunar í 80 mm (enda þurfti ekki meira fyrir prufurnar
+              mínar). Þrátt fyrir þessar breytingar var þetta ennþá smá tæpt,
+              þar sem ég þurfti að gefa leisiskeranum smá bil á milli brúnanna,
+              þannig ég ákvað að skera eina plötu sér og hinar saman. Hér sést
+              hvernig plötunum var raðað upp (mínus þessi eina sem var sér):
+
+              <figure style="text-align: center">
+                <img
+                  src="images/align.png"
+                  style="max-width: 70%; height: auto"
+                />
+                <figcaption>Plötunum raðað upp fyrir skurð.</figcaption>
+              </figure>
+
+              <br />
+
+              Ég þurfti svo náttúrulega að reikna með kerfinu í teikningunni,
+              þannig ég fór í Manufacture gluggann í Fusion, bjó til nýtt Setup
+              og valdi 2D Profile. Fyrst þurfti ég að setja inn kerf gildið
+              mitt, en restinni var haldið óbreyttu. Svo valdi ég öll yfirborðin
+              sem átti að skera, valdi Compensation type>In computer og afhakaði
+              Lead in og Lead out (skv. gæjanum í myndbandinu).
+
+              <br />
+
+              <figure style="text-align: center">
+                <img
+                  src="images/cutter.png"
+                  style="max-width: 70%; height: auto"
+                />
+                <figcaption>Stillingar fyrir leiserinn</figcaption>
+              </figure>
+              <br />
+
+              <figure style="text-align: center">
+                <img src="images/2d.png" style="max-width: 70%; height: auto" />
+                <figcaption>2D Profile fyrir skurð.</figcaption>
+              </figure>
+
+              <br />
+
+              Þá var komið Setup og ég valdi Post Process, breytti nafninu,
+              afhakaði Include drill og hakaði við Only cutting.
+
+              <br />
+
+              <figure style="text-align: center">
+                <img
+                  src="images/postprocess.png"
+                  style="max-width: 70%; height: auto"
+                />
+                <figcaption>Post process</figcaption>
+              </figure>
+              <br />
+
+              Næst exportaði ég Setup-inu sem DXF file og það var tilbúið fyrir
+              skurð.
+            </p>
+            <h4>Skurður: Prufa</h4>
+            <p>
+              Áður en ég skar út hilluna mína vildi ég gera prufu til að sjá
+              hvort kerfið væri í lagi. Ég teiknaði tvo litla kassa í Fusion með
+              fingrum á og notaði aðferðirnar sem ég nefndi hér fyrir ofan til
+              að exporta sem DXF. Ég opnaði svo DXF skjalið í Inkscape og
+              stillti það þannig að stærðin væri rétt (eins og límmiðann hér
+              fyrir ofan). Ég passaði mig að velja rétt efni og þykkt í
+              leisiskeraforritinu og byrjaði svo skurðinn.
+
+              <figure style="text-align: center">
+                <img
+                  src="images/prufa.jpeg"
+                  style="max-width: 70%; height: auto"
+                />
+                <figcaption>Prufuskurðurinn.</figcaption>
+              </figure>
+
+              Eins og sést á myndinni kom skurðurinn mjög vel út og bitarnir
+              pössuðu vel saman.
+            </p>
+            <h4>Skurður: Hillan</h4>
+            <p>
+              Að skera út hilluna og skúffuna var ekki alveg jafn einfalt. Sömu
+              skref og fyrir prufuna voru framkvæmd, en leisiskerinn náði ekki
+              að skera suma bita alla leið í gegn. Þar sem skurðurinn gekk vel á
+              bitum sem voru skornir nálægt brúnunum má álykta að platan sjálf
+              hafi verið smá bogin ásamt þvi að leisiskerinn var með vesen. Ég
+              þurfti því að skera hvern bita í plötunni sér í lagi, til að
+              athuga hvort hann skærist rétt. Ég fiffaði hraðann á leisiskeranum
+              aðeins til og endaði alveg í 5% hraða sem skilaði loksins góðum
+              skurði. Áður en ég komst að því þurfti ég að skera í hvern bita
+              tvisvar, sem gerði það að verkum að sumir bitar voru með örlítið
+              stærra bil á milli (eða kerf). Hér sést lokaafurðin (með handfangi
+              sem lesa má meira um í verkefni 3):
+              <figure style="text-align: center">
+                <img
+                  src="images/samsett.jpeg"
+                  style="max-width: 70%; height: auto"
+                />
+                <figcaption>Hillan og skúffan eftir skurð.</figcaption>
+              </figure>
+              Vegna bilsins á milli helst hillan ekki mjög vel saman, en ég geri
+              ráð fyrir að líma hana saman þegar tækifæri gefst. Annars gekk
+              þetta nokkuð vel.
+            </p>
+            <h4>Gagnabanki</h4>
+            <p>Öll hönnunarskjöl má finna <a href="">hér</a>.</p>
           </div>
         </section>
       </article>
 
       <!-- Footer -->
       <footer id="footer">
+        <section id="contact" class="contact-section">
+          <div class="contact-container">
+            <h2>Hafðu samband</h2>
+            <p class="contact-sub">
+              Hafðu endilega samband ef þú ert með einhverjar fyrirspurnir
+            </p>
+
+            <form action="https://formspree.io/f/xvzbjrgj" method="POST">
+              <div class="row">
+                <div class="field">
+                  <label for="name">Nafn</label>
+                  <input type="text" name="name" id="name" required />
+                </div>
+
+                <div class="field">
+                  <label for="email">Netfangið þitt</label>
+                  <input type="email" name="email" id="email" required />
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="message">Skilaboð</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="6"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="contact-actions">
+                <button type="submit" class="contact-button">SENDA</button>
+              </div>
+            </form>
+          </div>
+        </section>
+        <br />
         <ul class="icons">
-          <header>
-            <h2>Hafðu samband:</h2>
-          </header>
           <li>
             <a
               href="https://www.instagram.com/jovangaajic/"

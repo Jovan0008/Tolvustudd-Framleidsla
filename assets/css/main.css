@@ -4176,6 +4176,9 @@ input, select, textarea {
 
 .hero-card h2 {
   margin-bottom: 0.5em;
+    max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .hero-card p {
